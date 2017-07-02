@@ -1,5 +1,5 @@
 //QUICK SORT ALGORITHM
-//Uses Lomuto Partiion Scheme
+//Uses Lomuto Partition Scheme
 
 #include <stdio.h>
 #include <string.h>
