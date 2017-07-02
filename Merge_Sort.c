@@ -1,3 +1,5 @@
+//MERGE SORT ALGORITHM
+
 #include <stdio.h>
 
 int data[4] = {2, 1, 4, 3};                     //Data Array

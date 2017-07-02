@@ -4,11 +4,11 @@
 #include <string.h>
 #include <stdio.h>
 
-int data[5] = {1, 3, 5, 4, 2, };                   //Global int array
+int data[5] = {1, 3, 5, 4, 2};                   //Global int array
 
 void swap(int x, int y){                            //Swaps x and y
 
-  int tmp = 0; 
+  int tmp = 0;
 
   tmp = data[x];
   data[x] = data[y];
