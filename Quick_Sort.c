@@ -13,7 +13,6 @@ void swap(int x, int y){
   int tmp = 0;
 
   tmp = nums[x];
-
   nums[x] = nums[y];
   nums[y] = tmp;
 }
@@ -22,29 +21,17 @@ void swap(int x, int y){
 /////////////////////////////////////////////////////////////
 int partition(int start, int stop){
 
-  int e = 0;
-  int count = 1;
   int j = 0;
   int i = start - 1;
   int pivot = nums[stop];
 
   for(j=start; j<stop+1; j++){
-    printf("Cycle: %d\n", count);
-    for(e=0; e<10; e++){
-      printf("%d\t", nums[e]);
-    }
-
     if (nums[j] <= pivot) {
       i = i+1;
       if(i != j){
         swap(j, i);
       }
     }
-
-    printf("\nJ : %d\n", j);
-    printf("I : %d\n", i);
-    printf("\n=================================================\n");
-    count++;
   }
 
   return i;
@@ -70,10 +57,17 @@ int main(int argc, char const *argv[]) {
   int i =0;
   int N = sizeof(nums)/sizeof(int);
 
-  quickSort(0, N-1);
-
+  printf("\nUnsorted Array: ");
   for(i=0; i<10; i++){
     printf("%d\t", nums[i]);
   }
+
+  quickSort(0, N-1);
+
+  printf("\nSorted Array: \t");
+  for(i=0; i<10; i++){
+    printf("%d\t", nums[i]);
+  }
+
   return 0;
 }
