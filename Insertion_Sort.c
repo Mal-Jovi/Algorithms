@@ -14,16 +14,25 @@ int main(int argc, char const *argv[]) {
 
   int N = (sizeof(data)) / (sizeof(int));           //Size of the Array
 
+  for(i=0; i<N; i++){
+      printf("%d\t", data[i]);
+  }
+
+  printf("\n");
+
   for(i=1; i<N; i++){                               //Iterates through every value in array
     kthValue = data[i];                             //Defines the kth value, used for swapping
     k = i;                                          //Defines the index of the kth value
 
     while(k>0 && data[k-1] > kthValue){             //Condition for replacing value
       data [k] = data[k-1];                         //Makes the value at index k the larger of the two values
-      k--;                                          //Reduces K by 1, since index k is always the highest current value
+      k--;                                          //Reduces K by 1, since index k is always the smallest current value
     }
 
     data[k] = kthValue;                             //Completes the swap by making the value before index k the smaller value
+  }
+  for(i=0; i<N; i++){
+      printf("%d\t", data[i]);
   }
 
   return 0;
